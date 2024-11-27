@@ -68,6 +68,10 @@ a{
     color: #1f2138;
 }
 
+.form strong{
+    color: red;
+}
+
 .aplicationFiltro{
     margin-top: 20px;
 }
@@ -128,7 +132,11 @@ button:hover {
     border-radius: 4px;
     display: block;
     margin: 0 auto;
-  }
+}
+
+.map-container strong, p{
+    color: #1f2138;
+}
   
 .drivers {
     display: grid;

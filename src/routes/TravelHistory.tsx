@@ -6,12 +6,12 @@ export const TravelHistory = () => {
             <form id="filter-form" className="form">
 
                 <div>
-                    <label for="customer_id">ID do Usuário:</label>
+                    <label htmlFor="customer_id">ID do Usuário:</label>
                     <input type="text" name="customer_id"/>
                 </div>
 
                 <div>
-                    <label for="driverFilter">Filtrar por Motorista:</label>
+                    <label htmlFor="driverFilter">Filtrar por Motorista:</label>
                     <select id="driverFilter" name="driverFilter">
                         <option value="all">Todos</option>
                         <option value="João Silva">João Silva</option>
@@ -22,7 +22,7 @@ export const TravelHistory = () => {
                 <button type="submit" className="aplicationFiltro">Aplicar Filtro</button>
             </form>
 
-            <table class="styled-table">
+            <table className="styled-table">
                 <thead>
                     <tr>
                         <th>Data e Hora</th>

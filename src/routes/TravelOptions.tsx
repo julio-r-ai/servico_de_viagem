@@ -1,17 +1,29 @@
-export const TravelOptions = () => {
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+
+export const TravelOptions: React.FC = () => {
+    const location = useLocation();
+
+    const queryParams = new URLSearchParams(location.search);
+    const customerId = queryParams.get('customer_id');
+    const origin = queryParams.get('origin');
+    const destination = queryParams.get('destination');
+
     return(
         <div className="travels">
             <h1>Opções de Viagem</h1>
 
-            <div class="map-container">
+            <div className="map-container">
                 <h2>Rota</h2>
                 <h2>IMAGEM DO MAPA ESTATICO</h2>
-                {/* <img id="map" src="https://via.placeholder.com/600x300" alt="Mapa Estático"> */}
+                <p><strong>ID do Cliente:</strong> {customerId}</p>
+                <p><strong>Origem:</strong> {origin}</p>
+                <p><strong>Destino:</strong> {destination}</p>
             </div>
 
             <h2>Motoristas Disponíveis</h2>
-            <div class="drivers">
-                <table class="styled-table">
+            <div className="drivers">
+                <table className="styled-table">
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -29,7 +41,7 @@ export const TravelOptions = () => {
                             <td>Toyota Corolla</td>
                             <td>4.8</td>
                             <td>R$ 25,00</td>
-                            <td><button class="choose-btn" onclick="chooseDriver('João Silva')">Escolher</button></td>
+                            <td><button className="choose-btn">Escolher</button></td>
                         </tr>
                     </tbody>
                 </table>
