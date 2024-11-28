@@ -108,6 +108,14 @@ button:hover {
     border-radius: 7px;
     justify-content: center;
     align-items: center;
+    margin-top: 400px;
+    margin-bottom: 20px;
+}
+
+.infoEstimate{
+    height: 60px;
+    display: grid;
+    justify-items: left;
 }
   
 .container {
@@ -124,6 +132,12 @@ button:hover {
     margin-bottom: 20px;
     color: #1f2138;
 }
+
+.map-container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
   
 .map-container img {
     width: 100%;
@@ -138,8 +152,14 @@ button:hover {
     color: #1f2138;
 }
   
+.line{
+    margin-top: 20px;
+    width: 100%;
+    height: 2px;
+    background-color: #85d2bd;
+}
+
 .drivers {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     padding: 20px 10px 5px 10px;

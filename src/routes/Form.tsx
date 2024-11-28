@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom";
 
 export const FormTravelRequest: React.FC = () => {
@@ -8,7 +8,6 @@ export const FormTravelRequest: React.FC = () => {
         destination: '',
     });
 
-    const [errorMessage, setErrorMessage] = useState<string>('');
     const navigate = useNavigate();
     
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,11 +17,11 @@ export const FormTravelRequest: React.FC = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-
-        setErrorMessage(""); 
+        
+        navigate(`/travelOptions?customer_id=${formData.customer_id}&origin=${formData.origin}&destination=${formData.destination}`);
     
-        try {
-          const response = await fetch('http://localhost:8080/createRide', {
+        /* try {
+            const response = await fetch('http://localhost:8080/createRide', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -38,7 +37,7 @@ export const FormTravelRequest: React.FC = () => {
           
         } catch (error: any) {
           console.error('Erro:', error);
-        }
+        }  */ 
     };
 
     return(
