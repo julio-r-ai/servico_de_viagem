@@ -33,7 +33,6 @@ export const TravelOptions: React.FC = ( ) => {
         getDrivers();
     }, []);
 
-
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -46,10 +45,6 @@ export const TravelOptions: React.FC = ( ) => {
 
     const mapUrl = `https://maps.googleapis.com/maps/api/staticmap?size=800x300&path=${origin}|${destination}&markers=color:blue|label:A|${origin}&markers=color:red|label:B|${destination}&key=${apiKey}`;
 
-    const handleRowClick = (customer_id: string, nameDrive: string) => {
-        
-    };
-
     const [formData, setFormData] = useState({
         customer_id: '',
         origin: '',
@@ -59,6 +54,10 @@ export const TravelOptions: React.FC = ( ) => {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const handleRowClick = (customer_id: string, nameDrive: string) => {
+        
     };
 
     const handleSubmit = async (e: React.FormEvent, ) => {
@@ -111,7 +110,7 @@ export const TravelOptions: React.FC = ( ) => {
                             <th>Descrição</th>
                             <th>Veículo</th>
                             <th>Avaliação</th>
-                            <th>Valor da Viagem</th>
+                            <th>Valor da Viagem/km</th>
                             <th>Ação</th>
                         </tr>
                     </thead>
