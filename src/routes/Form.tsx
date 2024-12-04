@@ -57,7 +57,7 @@ export const FormTravelRequest: React.FC = () => {
       setError(null);
 
       navigate(
-        `/travelOptions?customer_id=${formData.customer_id}&distance=${result.distance}&duration=${result.duration}&origemLatitude=${result.origemLatitude}&origemLogitude=${result.origemLogitude}&destinationLatitude=${result.destinationLatitude}$destinationLogitude=${result.destinationLogitude}`
+        `/travelOptions?customer_id=${formData.customer_id}&distance=${result.distance}&duration=${result.duration}&origemLatitude=${result.origemLatitude}&origem=${formData.origin}&destination=${formData.destination}&origemLogitude=${result.origemLogitude}&destinationLatitude=${result.destinationLatitude}&destinationLogitude=${result.destinationLogitude}`
       );
       
     } catch (e: any) {
